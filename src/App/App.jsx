@@ -3,6 +3,7 @@ import Statistics from 'components/Statistics/Statistics'
 import FeedbackOptions from 'components/FeedbackOptions/FeedbackOptions';
 import Section from 'components/Section/Section';
 import 'react-notifications/lib/notifications.css';
+
 // import { Notification } from 'notification';
 class App extends Component {
   state = {
@@ -56,10 +57,13 @@ render() {
       style={{
         height: '100vh',
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101'
+        color: '#010101',
+        backgroundColor:'#eeeee9',
+        padding:'50px 50px'
       }}
     >
      <Section title="Please leave feedback">

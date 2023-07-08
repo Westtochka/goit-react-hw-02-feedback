@@ -1,17 +1,27 @@
+import { Button } from "./FeedbackOptions.styled";
+
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   const { onGood, onNeutral, onBad } = onLeaveFeedback;
 
   return (
     <>
-      <button type="button" onClick={onGood}>
+      <Button type="button" onClick={onGood}  >
         {options[0]}
-      </button>
-      <button type="button" onClick={onNeutral}>
+      </Button>
+      <Button type="button"
+      style={{        
+        color: '#48cef3'
+      }}      
+      onClick={onNeutral}>
         {options[1]}
-      </button>
-      <button type="button" onClick={onBad}>
+      </Button>
+      <Button type="button"
+      style={{        
+        color: '#747471'
+      }}
+       onClick={onBad}>
         {options[2]}
-      </button>
+      </Button>
     </>
   );
 };

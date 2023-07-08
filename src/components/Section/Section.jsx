@@ -1,10 +1,11 @@
-    const Section = ({title, children}) => {
+   import { Title, Section1 } from "./Section.styled";
+   const Section = ({title, children}) => {
     return (
 <>
-<section >
-            <h2 >{title}</h2>
+<Section1>
+            <Title >{title}</Title>
             {children}
-</section>      
+</Section1>      
 </>
     );
   };
