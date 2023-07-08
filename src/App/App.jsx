@@ -66,16 +66,7 @@ render() {
         padding:'50px 50px'
       }}
     >
-     <Section title="Please leave feedback">
-     {this.countTotalFeedback() > 0 ? (
-       <Statistics 
-       good={this.state.good} 
-       neutral={this.state.neutral} 
-       bad={this.state.bad} 
-       total={total} 
-       positivePercentage={positivePercentage}
-     />): "There is no feedback" }
-     </Section>
+     
      {/* <Notification message="There is no feedback"/> */}
          <Section title="Statistics">
          <FeedbackOptions
@@ -86,7 +77,17 @@ render() {
     onBad: this.handleClickBad
   }}
 />
-</Section>       
+</Section>   
+<Section title="Please leave feedback">
+     {this.countTotalFeedback() > 0 ? (
+       <Statistics 
+       good={this.state.good} 
+       neutral={this.state.neutral} 
+       bad={this.state.bad} 
+       total={total} 
+       positivePercentage={positivePercentage}
+     />): "There is no feedback" }
+     </Section>    
 </div>
   );
 }}
