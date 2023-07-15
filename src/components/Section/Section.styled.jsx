@@ -10,3 +10,7 @@ display:flex;
 flex-direction:column;
 padding:20px 20px;
 `
+
+export const H3=styled.h3`
+color:#a20e0e;
+`

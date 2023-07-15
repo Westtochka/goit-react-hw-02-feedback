@@ -1,4 +1,5 @@
 import { Button } from "./FeedbackOptions.styled";
+import PropTypes from 'prop-types'
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   const { onGood, onNeutral, onBad } = onLeaveFeedback;
@@ -27,6 +28,17 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 };
 
 export default FeedbackOptions;
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onLeaveFeedback: PropTypes.shape({
+    onGood: PropTypes.func.isRequired,
+    onNeutral: PropTypes.func.isRequired,
+    onBad: PropTypes.func.isRequired,
+  }).isRequired,
+};
+
+
 
 
 

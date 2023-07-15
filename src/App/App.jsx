@@ -86,7 +86,9 @@ render() {
        bad={this.state.bad} 
        total={total} 
        positivePercentage={positivePercentage}
-     />): "There is no feedback" }
+     />):  <h3 style={{
+      color: '#e01b1b,'
+    }}>There is no feedback</h3> }
      </Section>    
 </div>
   );
