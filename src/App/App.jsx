@@ -3,6 +3,8 @@ import Statistics from 'components/Statistics/Statistics';
 import FeedbackOptions from 'components/FeedbackOptions/FeedbackOptions';
 import Section from 'components/Section/Section';
 import 'react-notifications/lib/notifications.css';
+import Notification  from '../components/Notification/Notification';
+// import 'react-notifications/lib/notifications.css';
 
 class App extends Component {
   state = {
@@ -59,14 +61,14 @@ class App extends Component {
               neutral={this.state.neutral}
               bad={this.state.bad}
               total={this.countTotalFeedback()}
-              positivePercentage={this.countPositiveFeedbackPercentage()} // Нужно исправить эту строку
+              positivePercentage={this.countPositiveFeedbackPercentage()} 
             />
           ) : (
-            <h3 style={{ color: '#e01b1b' }}>There is no feedback</h3>
+            // <h3 style={{ color: '#e01b1b' }}>There is no feedback</h3>
+            <Notification message={'There is no feedback'}/>
           )}
         </Section>
-      </div>
-    );
+      </div>);
   }
 }
 
